@@ -3,4 +3,4 @@ logs
 *.log
 node_modules/
 jUnit-report/
-jUnit-report-html/
+junit-report-html/
