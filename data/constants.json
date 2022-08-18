@@ -1,0 +1,42 @@
+{
+    "timers": {
+        "short": 2000,
+        "short2": 1000,
+        "short3": 500,
+        "medium": 3000,
+        "medium2": 3500,
+        "large": 5000,
+        "extraLarge": 10000
+    },
+    "automationUser": {
+        "username": "cxone.user.admin",
+        "password": "Automation2022"
+    },
+    "pageObjects": {
+        "cxOnePage": {
+            "modalValidations": {
+                "new": "New Dashboard",
+                "edit": "Edit Dashboard",
+                "duplicate": "Save A Copy",
+                "newDashboardName": "No Dashboard Previously created - Test",
+                "newDashboardFolder": "Automation Dashboards",
+                "newDashboardDescription": "This is a dashboard created with Automation Specs"
+            },
+            
+            "homePage": "https://automation-dev.clearviewportal.com/Dashboard/DashboardNew.aspx",
+            "timeZoneClass": "languageMenuSelected ng-star-inserted",
+            "emptyWorkspaceMsg": "No dashboards selected",
+            "noWidgetMsg": "Click a widget Or drag here",
+            "subscriptionBehaviorSelector": "#subSchedEmailFreqRadio",
+            "settingsDashboardName": "No Dashboard Previously created - Test",
+            "dashboardNamePreviouslyCreated":"Dashboard Previously created - Test",
+            "settingsDashboardNameEdited": "No Dashboard Previously created - Test Edited",
+            "settingsDashboardNameDuplicated": "Dashboard Previously created - Test Duplicated",
+            "settingsFolder": "Automation Dashboards",
+            "settingsDescription": "This is a dashboard created with Automation Specs",
+            "settingsDescriptionEdited": "This is a dashboard created with Automation Specs - Edited",
+            "settingsDescriptionDuplicated": "This is a dashboard created with Automation Specs - Duplicated"
+        }
+
+    }
+}

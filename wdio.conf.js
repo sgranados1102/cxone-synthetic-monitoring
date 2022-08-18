@@ -1,6 +1,8 @@
 exports.config = {
   //
-  specs: ["./test/specs/**/*.js"],
+  specs: [
+    "./test/specs/cxone.dashboard.core.test.js",
+],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'

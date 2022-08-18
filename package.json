@@ -20,6 +20,7 @@
         "test": "wdio run wdio.conf.js && wdio-junit-to-html -i jUnit-report -o jUnit-report-html"
     },
     "dependencies": {
+        "chai": "^4.3.6",
         "wdio-junit-to-html": "^3.1.2"
     }
 }

@@ -1,41 +1,46 @@
 
+import Page from "./page";
+class LoginPage extends Page{
 
-import Page from './page';
-
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get inputUsername () {
-        return $('#username');
+    constructor(){
+        super();
     }
 
-    get inputPassword () {
-        return $('#password');
-    }
-
-    get btnSubmit () {
-        return $('button[type="submit"]');
-    }
+    get username_box() {return $('#ContentPlaceHolderMain_txtUsername') }
+    get password_box() {return $('#ContentPlaceHolderMain_txtPassword') }
+    get login_button() {return $('#ContentPlaceHolderMain_btnLogin') }
+    get forgot_link() {return $('.loginForgotPassword') }
+    get error_message() {return $('#ContentPlaceHolderMain_lblError')}
 
     /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
+     * @function openURL It uses the Parent method to navigate to a specific URL and it opens it within the actual browser window
+     * @param {*} siteURL URL you want to open within the Browser capability
      */
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+    async openURL(siteURL){
+        await this.navigateTo(siteURL);
+
+    }
+    /**
+     * @function enterUsername It sets the Username Value into the Username input field within the Login Page
+     * @param {*} username The username you want to set.
+     */
+   async enterUsername(username = ''){
+        await this.typeInto(await this.username_box,username);
+    }
+    /**
+     * @function enterPassword It sets the Password Value into the Password input field within the Login Page
+     * @param {*} password The password you want to set.
+     */
+    async enterPassword(password = ''){
+       await  this.typeInto(await this.password_box,password);
+
     }
 
     /**
-     * overwrite specific options to adapt it to page object
+     * @function clickLoginButton It clicks on the Login button within the Login Page
      */
-    open () {
-        return super.open('login');
+    async clickLoginButton(){
+        await this.click(this.login_button);
     }
 }
 
